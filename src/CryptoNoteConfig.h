@@ -25,8 +25,8 @@ namespace parameters {
 const uint64_t CRYPTONOTE_MAX_BLOCK_NUMBER                   = 500000000;
 const size_t   CRYPTONOTE_MAX_BLOCK_BLOB_SIZE                = 500000000;
 const size_t   CRYPTONOTE_MAX_TX_SIZE                        = 1000000000;
-const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX       = 1;
-const size_t   CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW          = 60;
+const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX       = 0x81;
+const size_t   CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW          = 10;
 const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT            = 60 * 60 * 2;
 
 const size_t   BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW             = 60;
@@ -88,7 +88,7 @@ const char     CRYPTONOTE_BLOCKCHAIN_INDICES_FILENAME[]      = "blockchainindice
 const char     MINER_CONFIG_FILE_NAME[]                      = "miner_conf.json";
 } // parameters
 
-const char     CRYPTONOTE_NAME[]                             = "xcicoin";
+const char     CRYPTONOTE_NAME[]                             = "janetacoin";
 
 const uint8_t  CURRENT_TRANSACTION_VERSION                   =  1;
 const uint8_t  BLOCK_MAJOR_VERSION_1                         =  1;
@@ -101,8 +101,8 @@ const size_t   BLOCKS_IDS_SYNCHRONIZING_DEFAULT_COUNT        =  10000;  //by def
 const size_t   BLOCKS_SYNCHRONIZING_DEFAULT_COUNT            =  200;    //by default, blocks count in blocks downloading
 const size_t   COMMAND_RPC_GET_BLOCKS_FAST_MAX_COUNT         =  1000;
 
-const int      P2P_DEFAULT_PORT                              =  42000;
-const int      RPC_DEFAULT_PORT                              =  42001;
+const int      P2P_DEFAULT_PORT                              =  42058;
+const int      RPC_DEFAULT_PORT                              =  42059;
 
 const size_t   P2P_LOCAL_WHITE_PEERLIST_LIMIT                =  1000;
 const size_t   P2P_LOCAL_GRAY_PEERLIST_LIMIT                 =  5000;
@@ -120,8 +120,8 @@ const size_t   P2P_DEFAULT_HANDSHAKE_INVOKE_TIMEOUT          = 5000;          //
 const char     P2P_STAT_TRUSTED_PUB_KEY[]                    = "";
 
 const char* const SEED_NODES[] = { 
-  "104.131.137.173:42000",
-  "138.68.43.93:42000"
+  "137.184.16.182:42058",
+  "192.241.157.1:42058"
 };
 
 
@@ -130,13 +130,7 @@ struct CheckpointData {
   const char* blockId;
 };
 
-const std::initializer_list<CheckpointData> CHECKPOINTS = { {1, "44605b385e6d3467d43a0b94e58861170e1d309020b27f829a85e4603cd7c9b8"}
-, {42, "4322b517faeaee1b8318b2a02a486e479da2f4c13ea82c818cca02ca1e5ea6fa"}
-, {2500, "4c5c5b6be0a5c372381e7e9fa969a8f8693719be636840c130cc7ec99e9e96e2"}
-, {5000, "2bd06542971a8436118c721d2838dbc10e53f134f218787c51d1f05a7931fd5c"}
-, {42000, "cf2d5fe0e5423201dbcec3eb26df4b63a307ae1c81b9a80e2536982d1df9de0f"}
-, {80000, "48ccf7be9ed6a444409248b1bf538187cb376077f0cdd54d1017def5d394e788"}
- };
+const std::initializer_list<CheckpointData> CHECKPOINTS = {};
 
 } // CryptoNote
 
